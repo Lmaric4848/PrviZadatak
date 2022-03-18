@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Imenik</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="stil.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <h2>Imenik</h2>
+        </header>
+
+
+
+        <section>
+            <nav>
+                
+                <label for="fname">Ime:</label><br>
+                <input type="text" id="fname" class="fname" name="fname" required><br><br>
+
+                <label for="lname">Prezime:</label><br>
+                <input type="text" id="lname" class="lname" name="lname" required><br><br>
+
+                <label for="adresa_broj">Ulica i kućni broj:</label><br>
+                <input type="text" id="adresa_broj" class="adresa_broj" name="adresa_broj"><br><br>
+
+                <label for="mjesto">Mjesto:</label><br>
+                <input type="text" id="mjesto" class="mjesto" name="mjesto"><br><br>
+
+                <label for="pbroj">Poštanski broj:</label><br>
+                <input type="text" id="pbroj" class="pbroj" name="pbroj"><br><br>
+
+                <label for="telefon">Broj telefona:</label><br>
+                <select id="telefon" class="telefon">
+                    <option value="091/">091</option>
+                    <option value="095/">095</option>
+                    <option value="098/">098</option>
+                    <option value="099/" selected>099</option>
+                </select>
+                <input type="tel" id="telefon" class="telefon2" name="telefon" placeholder="345-2678" pattern="[0-9]{3}-[0-9]{4}"><br><br>
+
+                <form action="/action_page.php">
+                    <label for="rodenje">Datum rođenja:</label>
+                    <input type="date" id="rodenje" class="rodenje" name="rodenje">
+                </form>
+                
+                <br>
+                <div class="btn"><input type="submit" value="Submit"></div><br><br>
+            </nav>
+
+            
+
+            <article class="artikal">
+                <div class="container clearfix">
+                    <!--<div class="all_together">
+                            <div class="item clearfix" id="stanje-%id%">
+                                <div class="osoba_ime">%Luka%</div>
+                                <div class="osoba_prezime">%Marić%</div>
+                                <div class="right clearfix">
+                                <div class="osoba_datum">%05.05.2000.%</div>
+                            
+                                    <div class="item__delete">
+                                        <button class="item__delete--btn">
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button></div></div></div>
+                                <div class="item__all">
+                                    <button class="item__all--btn">
+                                        <i class="ion-ios-close-outline"></i>
+                                    </button></div></div></div></div>-->
+                                </div>
+            </article>
+           
+        </section>
+        <footer>
+           <footer></footer>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
