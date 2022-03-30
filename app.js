@@ -11,7 +11,7 @@ var UIController = (function(){
         inputBroj2: '.telefon2',
         inputDatum: '.rodenje',
         container: '.artikal',
-        container_del: '.container'
+        container_del: '.all_together'
     };
 
 
@@ -42,6 +42,15 @@ var UIController = (function(){
             newHtml = newHtml.replace('%05.05.2000.%',obj.datum);
             //insert the html into the dom
             document.querySelector(element).insertAdjacentHTML('beforeend', newHtml);
+        },
+
+        deleteListItem: function(selectorID){
+            var le = document.querySelector(DOMstrings.container_del);
+            var el = document.getElementById(selectorID);
+
+            el.parentNode.removeChild(el);
+            le.parentNode.removeChild(le);
+
         },
 
         clearFields: function() {
@@ -116,20 +125,21 @@ var Data = (function(){
            //return the new element
            return newItem;
        },
-       /*
-        deleteItem: function(AllPodatci,id){
+       
+        deleteItem: function(id){
             var ids,index;
-            ids = Data.AllItems[AllPodatci].map(function(current){
-                return current.id;
+
+            ids = allData.AllItems.AllPodatci.map(function(current){
+                return current.id.toString ();
             });
 
             index = ids.indexOf(id);
 
             if (index !== -1){
-                allData.AllItems[AllPodatci].splice(index, 1);
-            }
+                allData.AllItems.AllPodatci.splice(index, 1);
+            };
        },
-       */
+       
        
 
        testing: function(){
@@ -184,7 +194,7 @@ var controller = (function(DataCtrl,UICrtl){
         };
 
     };
-    /*
+    
     var ctrlDeleteItem = function(event){
         var ItemID;
 
@@ -194,9 +204,12 @@ var controller = (function(DataCtrl,UICrtl){
             
             //delete from data
             DataCtrl.deleteItem(ItemID);
+
+            //delete for UI
+            UICrtl.deleteListItem(ItemID);
         };
     };
-    */
+    
     
 
     return{
